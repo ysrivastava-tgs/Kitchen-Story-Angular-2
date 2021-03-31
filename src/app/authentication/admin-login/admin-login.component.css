@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+a:hover{
+    cursor: pointer;
+    border-bottom: 2px solid blue
+}
+.alignment{
+    float: right;
+    display: block;
+}
+.clearify{
+    clear: both;
+}
+.div-container-alignment
+{
+    text-align: center;
+    border-bottom-color: orange;
+    border-bottom-style: solid;
+    font-family: 'Dela Gothic One', cursive;
+}

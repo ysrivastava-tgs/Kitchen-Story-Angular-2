@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="https://i.imgur.com/uNGdWHi.png" alt="" srcset="" class="img-fluid pt-5">
+        </div>
+        <div class="col-md-6">
+            <div class="container pt-5 div-container-alignment">
+                <h3>Login</h3>
+            </div>
+            <form class="m-5" [formGroup]="loginForm" (ngSubmit)="handleFormSubmmit($event)">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="alignment">
+                    <a>Forgot Password?</a>
+                </div>
+                <br>
+                <br>
+                <div class="clearify"></div>
+                <button class="btn btn-outline-primary btn-lg btn-block">Login</button>
+              </form>
+        </div>
+    </div>
+</div>

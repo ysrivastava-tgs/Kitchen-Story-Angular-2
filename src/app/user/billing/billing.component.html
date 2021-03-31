@@ -1,0 +1,16 @@
+<div class="container">
+    
+<div class="shadow-sm p-3 mb-5 bg-white rounded mt-5 box-height-width">
+    <img src={{ilink}} alt="" class="rounded mx-auto d-block">
+    <div class="container">
+        <h5>Product Name : {{pname}}</h5>
+        <h5>Produt Price: RS.{{pprice}}</h5>
+        <div style="text-align: center;">
+            <button (click) = "makePayment()" class="btn btn-primary" id="payment">Click to Make Payment</button>
+        </div>
+        
+        <br>
+        <h5 id="status"></h5>
+    </div>
+    </div>
+</div>

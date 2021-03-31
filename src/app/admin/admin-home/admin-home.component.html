@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Add Products</h3>
+            <div class="shadow-sm p-3 mb-5 bg-white rounded box-height-width">
+                <form [formGroup]="addForm" (ngSubmit)="handleFormSubmmit($event)">
+                    <div class="form-group">
+                        <label for="productname">Enter Product ID</label>
+                        <input type="text" formControlName="productid" class="form-control" id="productid" aria-describedby="emailHelp" placeholder="Enter Product Name">
+                      </div>
+                    <div class="form-group">
+                      <label for="productname">Enter Product Name</label>
+                      <input type="text" formControlName="productname" class="form-control" id="productname" aria-describedby="emailHelp" placeholder="Enter Product Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="imglink">Enter Product Image Link</label>
+                        <input type="text" formControlName="imglink"class="form-control" id="imglink" aria-describedby="emailHelp" placeholder="Enter Product Name">
+                      </div>
+                      <div class="form-group">
+                        <label for="productprice">Enter Product Price</label>
+                        <input type="text" formControlName="productprice" class="form-control" id="productprice" aria-describedby="emailHelp" placeholder="Enter Product Name">
+                      </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+            </div>
+        </div>
+    
+    <div class="col-md-6">
+        <h3>Available Products</h3>
+        <div class="shadow-sm p-3 mb-5 bg-white rounded box-height-width">
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor = "let items of get_all_product_items">
+                Product Id: {{items.productid}} | 
+                  Product Name : {{items.productname}}
+                </li>
+               
+              </ul>
+        </div>
+    </div>
+    <div class="container">
+        <h3>Remove Products</h3>
+        <div class="shadow-sm p-3 mb-5 bg-white rounded box-height-width-2">
+            <ul class="list-group">
+                <li class="list-group-item"  *ngFor ="let items of get_all_product_items">
+                    Product Id: {{items.productid}} | 
+                    Product Name : {{items.productname}} | <button class="btn btn-danger" (click) = "delete(items.productid)">Delete</button></li> 
+               
+              </ul>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,24 @@
+<br>
+<br>
+<div class="container-fluid">
+    <!-- <div>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor = "let items of get_all_product_items">
+            Product Id: {{items.productid}} | 
+              Product Name : {{items.productname}}
+            </li>
+           
+          </ul>
+    </div> -->
+   <div class="row">
+    <div class="card col-3 m-2" style="width: 18rem;" *ngFor = "let items of get_all_product_items; let i = index">
+        <img class="card-img-top" src={{items.imglink}} alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{items.productname}}</h5>
+          <p class="card-text">RS.{{items.productprice}}</p>
+          <a  class="btn btn-outline-primary btn-lg btn-block" id = {{i}}  (click) = "buy(items.productname,items.imglink,items.productprice)">Buy</a>
+          <!-- <a  class="btn btn-outline-primary btn-lg btn-block" id = "{{i}}"  (click) = "get(i)" style="display: none;">Remove</a> -->
+        </div>
+      </div>
+   </div>
+</div>
